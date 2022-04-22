@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="page" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +7,47 @@
     <title>Way</title>
     <link rel="stylesheet" href="css/style.min.css">
 </head>
-<body class="body">
-  
+<body class="page-body">
+  <header class="main-header">
+    <nav class="main-nav">
+      <a class="logo" href="index.html">
+        <svg class="logo__icon" viewBox="0 0 58 22" width="58" height="22" >
+          <use xlink:href="img/sprite.svg#logo">
+        </svg>
+      </a>
+      <ul class="main-nav__list">
+        <li class="main-nav__item about-trip">
+          <span class="about-trip__text">О путешествии</span>
+        </li>
+        <li class="main-nav__item prices">
+          <span class="prices__text">Цены</span>
+        </li>
+        <li class="main-nav__item phone">
+          <svg class="phone__icon" viewBox="0 0 30 30" width="30" height="30" >
+            <use xlink:href="img/sprite.svg#phone">
+          </svg>
+          <span class="phone__text">+7 (499) -784-684-46</span>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="page-main">
+    <section class="promo">
+      <header class="promo__header">Путешествие по <br> Европе</header>
+      <p class="promo__description">В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а также потрясающая красота природы.</p>
+      <a class="promo__btn" href="#tour">смотреть тур</a>
+    </section>
+    <section class="countries">
+      <header class="countries__header">Места посещения</header>
+      <p class="countries__description">Вы можете выбрать полный тур или частичный, с посещением первых 3 мест</p>
+      <picture>
+        <source type="image/webp" media="(min-width: 1920px)" srcset="img/greece-countries-desktop.webp, img/greece-countries-desktop@2x.webp 2x">
+        <source type="image/webp" media="(min-width: 320px)" srcset="img/greece-countries-mobile.webp, img/greece-countries-mobile@2x.webp 2x">
+        <source media="(min-width: 1920px)" srcset="img/greece-countries-desktop.jpg, img/greece-countries-desktop@2x.jpg 2x">
+        <img class="countries__greece" src="img/greece-countries-mobile.jpg" srcset="img/greece-countries-mobile@2x.jpg 2x" alt="Греция">
+      </picture>
+    </section>
+  </main>
 
 
   <script src="js/main.min.js" type="module"></script>

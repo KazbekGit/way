@@ -53,17 +53,20 @@ const copyImages = () => {
     .pipe(gulp.dest('build/img'))
 }
 
-/* const createWebp = () => {
-  return gulp.src('source/img/**                /*.{png,jpg}')
+ const createWebp = () => {
+  return gulp.src('source/img/**/*.{png,jpg}')
     .pipe(squoosh({
       webp: {}
     }))
     .pipe(gulp.dest('build/img'))
 }
 
+/*
 const fav = () =>
   gulp.src(['./manifest.webmanifest','source/img/favicons/favicon.ico'])
     .pipe(gulp.dest('build/'));
+
+} */
 
 const svg = () =>
   gulp.src(['source/img/*.svg', '!source/img/sprites/*.svg', '!source/img/sprites.svg'])
@@ -76,9 +79,9 @@ const sprites = () => {
     .pipe(svgstore({
       inlineSvg: true
     }))
-    .pipe(rename('sprites-auto.svg'))
+    .pipe(rename('sprite.svg'))
     .pipe(gulp.dest('build/img'));
-} */
+}
 
 const copy = (done) => {
   gulp.src([
@@ -99,23 +102,6 @@ const clean = () => {
 };
 
 // Server
-
-/* export const server = (done) => {
-  browser.init({
-    server: {
-      baseDir: 'build'
-    },
-    cors: true,
-    notify: false,
-    ui: false,
-  });
-  done("DONEdone");
-}
-
-const reload = (done) => {
-  browser.reload();
-  done();
-} */
 
 const server = (done) => {
   browser.init({
@@ -165,16 +151,15 @@ export const watcher = () => {
 export default gulp.series(
   clean,
   // copy,
-/*   copyImages, */
+  copyImages,
 /*   fav, */
   gulp.parallel(
     styles,
     html,
-    scripts
-/*     scripts,
+    scripts,
     svg,
     sprites,
-    createWebp */
+    createWebp
   ),
   gulp.series(
     server,
