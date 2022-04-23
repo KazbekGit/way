@@ -48,6 +48,14 @@ const optimizeImages = () => {
     .pipe(gulp.dest('build/img'))
 }
 
+const copyFonst = (done) => {
+  gulp.src('source/fonts/*.{woff2,woff}', {
+    base: 'source'
+  })
+    .pipe(gulp.dest('build'))
+  done();
+}
+
 const copyImages = () => {
   return gulp.src('source/img/**/*.{png,jpg,ico}')
     .pipe(gulp.dest('build/img'))
@@ -81,18 +89,6 @@ const sprites = () => {
     }))
     .pipe(rename('sprite.svg'))
     .pipe(gulp.dest('build/img'));
-}
-
-const copy = (done) => {
-  gulp.src([
-    'source/fonts/*.{woff2,woff}',
-    'source/*.ico',
-    'source/img/sprites.svg'
-  ], {
-    base: 'source'
-  })
-    .pipe(gulp.dest('build'))
-  done();
 }
 
 // Clean
@@ -133,7 +129,7 @@ export const watcher = () => {
 
 /* export const build = gulp.series(
   clean,
-  copy,
+  copyFonts,
   optimizeImages,
   fav,
   gulp.parallel(
@@ -150,7 +146,7 @@ export const watcher = () => {
 
 export default gulp.series(
   clean,
-  // copy,
+  copyFonst,
   copyImages,
 /*   fav, */
   gulp.parallel(

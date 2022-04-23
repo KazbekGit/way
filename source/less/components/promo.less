@@ -22,4 +22,23 @@
   @media (max-width: @mobile-width-only) and (min-resolution: 2dppx) {
     background-image: url("../img/promo-bg-mobile@2x.jpg");
   }
+
+  @media (min-width: @tablet-width) {
+    min-height: 344px;
+    background-image: url("../img/promo-bg-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/promo-bg-tablet@2x.jpg");
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 860px;
+    background-image: url("../img/promo-bg-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/promo-bg-desktop@2x.jpg");
+    }
+  }
 }
+
