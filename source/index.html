@@ -22,29 +22,34 @@
         <use xlink:href="img/sprite.svg#logo">
       </svg>
     </a>
-    <nav class="main-nav main-nav--closed main-nav--noJS">
+    <nav class="main-nav main-nav--closed">
       <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
       <ul class="main-nav__list">
-        <li class="main-nav__item about-trip">
-          <a class="about-trip__text" href="#tour-about" aria-label="перейти к разделу о путешествии">О путешествии</a>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#tour-about" aria-label="перейти к разделу о путешествии">О путешествии</a>
         </li>
-        <li class="main-nav__item prices">
-          <a class="prices__text" href="#tour-prices" aria-label="перейти к разделу о ценах">Цены</a>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#tour-prices" aria-label="перейти к разделу о ценах">Цены</a>
         </li>
-        <li class="main-nav__item phone">
-          <svg class="phone__icon" viewBox="0 0 30 30" width="30" height="30" >
+        <li class="main-nav__item">
+          <svg class="main-nav__icon" viewBox="0 0 30 30" width="30" height="30" >
             <use xlink:href="img/sprite.svg#phone">
           </svg>
-          <a class="telephone main-nav__telephone" href="tel:+749978468446">+7(499)-784-684-46</a>
+          <a class="main-nav__link main-nav__phone" href="tel:+749978468446">+7(499)-784-684-46</a>
         </li>
       </ul>
     </nav>
   </header>
   <main class="page-main">
     <section class="promo">
-      <header class="promo__header">Путешествие по <br> Европе</header>
+      <header class="promo__header">Путешествие по <br class="mobile-br">&nbsp;Европе</header>
       <p class="promo__description">В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а также потрясающая красота природы.</p>
-      <a class="button promo__button" href="#tour-details" aria-label="подробности о туре">смотреть тур</a>
+      <a class="button promo__button" href="#tour-details" aria-label="подробности о туре">
+        <span>смотреть тур</span>
+        <svg width="16" height="16" viewBox="0 0 16 16">
+          <use xlink:href="img/sprite.svg#arrow-bottom">
+        </svg>
+      </a>
     </section>
     <section class="catalog">
       <div class="catalog__wrapper">
@@ -54,62 +59,57 @@
         </div>
         <div class="catalog__cards">
           <div class="card">
-            <a class="card__link-block" href="#tour-details"></a>
             <a class="card__link" href="#tour-details">
               <span class="card__name">Греция</span>
               <picture>
                 <source type="image/webp" media="(min-width: 1920px)" srcset="img/greece-countries-desktop.webp, img/greece-countries-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 320px)" srcset="img/greece-countries-mobile.webp, img/greece-countries-mobile@2x.webp 2x">
                 <source media="(min-width: 1920px)" srcset="img/greece-countries-desktop.jpg, img/greece-countries-desktop@2x.jpg 2x">
-                <img src="img/greece-countries-mobile.jpg" srcset="img/greece-countries-mobile@2x.jpg 2x" alt="Греция">
+                <img class="card__img" src="img/greece-countries-mobile.jpg" srcset="img/greece-countries-mobile@2x.jpg 2x" alt="Греция" width="288" height="425">
               </picture>
             </a>
           </div>
           <div class="card">
-            <a class="card__link-block" href="#tour-details"></a>
             <a class="card__link" href="#tour-details">
               <span class="card__name">Албания</span>
               <picture>
                 <source type="image/webp" media="(min-width: 1920px)" srcset="img/albania-countries-desktop.webp, img/albania-countries-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 320px)" srcset="img/albania-countries-mobile.webp, img/albania-countries-mobile@2x.webp 2x">
                 <source media="(min-width: 1920px)" srcset="img/albania-countries-desktop.jpg, img/albania-countries-desktop@2x.jpg 2x">
-                <img class="card card--albania" src="img/albania-countries-mobile.jpg" srcset="img/albania-countries-mobile@2x.jpg 2x" alt="Албания">
+                <img class="card__img" src="img/albania-countries-mobile.jpg" srcset="img/albania-countries-mobile@2x.jpg 2x" alt="Албания"  width="288" height="425">
               </picture>
             </a>
           </div>
           <div class="card">
-            <a class="card__link-block" href="#tour-details"></a>
             <a class="card__link" href="#tour-details">
               <span class="card__name">Македония</span>
               <picture>
                 <source type="image/webp" media="(min-width: 1920px)" srcset="img/macedonia-countries-desktop.webp, img/macedonia-countries-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 320px)" srcset="img/macedonia-countries-mobile.webp, img/macedonia-countries-mobile@2x.webp 2x">
                 <source media="(min-width: 1920px)" srcset="img/macedonia-countries-desktop.jpg, img/macedonia-countries-desktop@2x.jpg 2x">
-                <img class="card card--macedonia" src="img/macedonia-countries-mobile.jpg" srcset="img/macedonia-countries-mobile@2x.jpg 2x" alt="Македония">
+                <img class="card__img" src="img/macedonia-countries-mobile.jpg" srcset="img/macedonia-countries-mobile@2x.jpg 2x" alt="Македония"  width="288" height="425">
               </picture>
             </a>
           </div>
           <div class="card">
-            <a class="card__link-block" href="#tour-details"></a>
             <a class="card__link" href="#tour-details">
               <span class="card__name">Черногория</span>
               <picture>
                 <source type="image/webp" media="(min-width: 1920px)" srcset="img/montenegro-countries-desktop.webp, img/montenegro-countries-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 320px)" srcset="img/montenegro-countries-mobile.webp, img/montenegro-countries-mobile@2x.webp 2x">
                 <source media="(min-width: 1920px)" srcset="img/montenegro-countries-desktop.jpg, img/montenegro-countries-desktop@2x.jpg 2x">
-                <img class="card card--montenegro" src="img/montenegro-countries-mobile.jpg" srcset="img/montenegro-countries-mobile@2x.jpg 2x" alt="Черногория">
+                <img class="card__img" src="img/montenegro-countries-mobile.jpg" srcset="img/montenegro-countries-mobile@2x.jpg 2x" alt="Черногория"  width= "288" height="425">
               </picture>
             </a>
           </div>
           <div class="card">
-            <a class="card__link-block" href="#tour-details"></a>
             <a class="card__link" href="#tour-details">
               <span class="card__name">Хорватия</span>
               <picture>
                 <source type="image/webp" media="(min-width: 1920px)" srcset="img/croatia-countries-desktop.webp 1x, img/croatia-countries-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 320px)" srcset="img/croatia-countries-mobile.webp 1x, img/croatia-countries-mobile@2x.webp 2x">
                 <source media="(min-width: 1920px)" srcset="img/croatia-countries-desktop.jpg, img/croatia-countries-desktop@2x.jpg 2x">
-                <img class="card card--croatia" src="img/croatia-countries-mobile.jpg" srcset="img/croatia-countries-mobile@2x.jpg 2x" alt="Ховатия">
+                <img class="card__img" src="img/croatia-countries-mobile.jpg" srcset="img/croatia-countries-mobile@2x.jpg 2x" alt="Ховатия"  width="288" height="425">
               </picture>
             </a>
           </div>
@@ -118,31 +118,45 @@
     </section>
     <section class="tabs" id="tour-details">
       <ul class="tabs__list">
-        <li class="tabs__item"><input type="radio" name="country" value="greece" id="greece-tab"><label for="greece-tab">Греция</label></li>
-        <li class="tabs__item"><input type="radio" name="country" value="albania" id="albania-tab"><label for="albania-tab">Албания</label></li>
-        <li class="tabs__item"><input type="radio" name="country" value="macedonia" id="macedonia-tab"><label for="macedonia-tab">Македония</label></li>
-        <li class="tabs__item"><input type="radio" name="country" value="montenegro" id="montenegro-tab"><label for="montenegro-tab">Черногория</label></li>
-        <li class="tabs__item"><input type="radio" name="country" value="croatia" id="croatia-tab"><label for="croatia-tab">Ховатия</label></li>
+        <li class="tabs__item tabs__item--active">Греция</li>
+        <li class="tabs__item">Албания</li>
+        <li class="tabs__item">Македония</li>
+        <li class="tabs__item">Черногория</li>
+        <li class="tabs__item">Ховатия</li>
       </ul>
-      <section class="country-description">
-        <header class="country-description__header">Греция</header>
-        <p class="country-description__text">На севере Греции находится один из крупнейших комплексов монастырей, расположенных на вершинах скал. Название его «Метеора» буквально переводится как «висящие в воздухе». Этот монастырь основная цель нашего путешествия в Греции. После покарения скал из песчанника и обломочной горной породы, достигающих в высоту 600 метров, наградой будет неописуемая красота природы и атмосфера, царящая в монастырях Метеоры.</p>
-        <button type="button" class="button country-description__button" aria-label="купить тур">купить тур сейчас</button>
-      </section>
-      <section class="reviews">
-        <header class="reviews__header">Отзывы</header>
-        <p>Метеоры в Греции можно сравнить разве что с Монсерратт в Испании. Такие же высоченные скалы. Но здесь потрясает масштаб. Огромная территория, высоко в горах. Ощущение такое, как будто стоишь на краю света! </p>
-        <div class="reviews__author">
-          <picture>
-            <source type="image/webp" media="(min-width: 320px)" srcset="img/author-avatar.webp, img/author-avatar@2x.webp 2x">
-            <img class="reviews__author-avatar" src="img/author-avatar.png" srcset="img/author-avatar@2x.png 2x" alt="Фото автора">
-          </picture>
-          <p class="reviews__author-name">Влада Голицина</p>
+      <div class="tabs__wrapper">
+        <div class="tabs__description">
+          <header class="tabs__description-header">Греция</header>
+          <p class="tabs__description-text">На севере Греции находится один из крупнейших комплексов монастырей, расположенных на вершинах скал. Название его «Метеора» буквально переводится как «висящие в воздухе». Этот монастырь основная цель нашего путешествия в Греции. После покарения скал из песчанника и обломочной горной породы, достигающих в высоту 600 метров, наградой будет неописуемая красота природы и атмосфера, царящая в монастырях Метеоры.</p>
+          <button class="button tabs__description-button" type="button" aria-label="купить тур">купить тур сейчас</button>
         </div>
-      </section>
-      <section class="prices">
+        <div class="reviews">
+          <div class="reviews__wrapper">
+            <header class="reviews__header">Отзывы</header>
+            <p class="reviews__description">Метеоры в Греции можно <br class="mobile-br">&nbsp;сравнить разве что с<br class="mobile-br">&nbsp;Монсерратт в Испании. Такие же высоченные скалы. Но здесь потрясает масштаб. Огромная территория, высоко в горах. Ощущение такое, как будто стоишь на краю света! </p>
+            <div class="reviews__author">
+              <picture>
+                <source type="image/webp" media="(min-width: 320px)" srcset="img/author-avatar.webp, img/author-avatar@2x.webp 2x">
+                <img class="reviews__author-avatar" src="img/author-avatar.png" srcset="img/author-avatar@2x.png 2x" alt="Фото автора" width="38" height="38">
+              </picture>
+              <p class="reviews__author-name">Влада Голицина</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="prices">
+      <div class="prices__wrapper">
+        <div class="prices__description">
+          <header class="prices__prices__description-header" id="tour-prices">Цены</header>
+          <p class="prices__text">Специально для Вас  мы разработали 2 пакета цен с разными условиями, отталкиваясь от Ваших потребностей и возможностей. Выберите для себя лучший вариант отпуска и отдохните на все 100%! </p>
+          <div class="contacts">
+            <p class="contacts__title">Свяжитесь с нами</p>
+            <a class="contacts__telephone" href="tel:+749978468446">+7(499)-784-684-46</a>
+          </div>
+        </div>
         <div class="prices__card prices__card--active prices__complex">
-          <header class="prices__header">Комплексный<span class="prices__complex-price">$1999</span></header>
+          <header class="prices__header">Комплексный<p class="prices__price-value">$1999</p></header>
           <p class="prices__subtitle">Ознакомьтесь с перечнем того, что входит в данный пакет </p>
           <ul class="prices__list prices__list--complex">
               <li class="prices__item prices__item--complex">Разработанный маршрут с гидом группы</li>
@@ -153,7 +167,7 @@
           <button type="button" class="button prices__button" aria-label="купить тур сейчас">купить тур сейчас</button>
         </div>
         <div class="prices__card prices__economical">
-          <header class="prices__header">Комплексный<span class="prices__economical-price">$1399</span></header>
+          <header class="prices__header">Экономный<p class="prices__price-value">$1399</p></header>
           <p class="prices__subtitle">Ознакомьтесь с перечнем того, что входит в данный пакет </p>
           <ul class="prices__list prices__list--economical">
             <li class="prices__item prices__item--economical">Разработанный маршрут с гидом группы</li>
@@ -164,15 +178,7 @@
           </ul>
           <button type="button" class="button prices__button" aria-label="купить тур сейчас">купить тур сейчас</button>
         </div>
-        <div class="prices__description">
-          <header class="prices__description__header" id="tour-prices">Цены</header>
-          <p>Специально для Вас  мы разработали 2 пакета цен с разными условиями, отталкиваясь от Ваших потребностей и возможностей. Выберите для себя лучший вариант отпуска и отдохните на все 100%! </p>
-          <div class="contacts">
-            <p class="contacts__title">Свяжитесь с нами</p>
-            <a class="telephone contacts__telephone" href="tel:+749978468446">+7(499)-784-684-46</a>
-          </div>
-        </div>
-      </section>
+      </div>
     </section>
     <section class="questions">
       <header class="У Вас остались вопросы?"></header>
@@ -209,7 +215,7 @@
       <div class="contact-us">
         <header class="ncontact-us__header page-footer__header">Наши контакты</header>
         <a href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
-        <a class="telephone contact-us__telephone" href="tel:+749978468446">+7(499)-784-684-46</a>
+        <a class="contact-us__telephone" href="tel:+749978468446">+7(499)-784-684-46</a>
       </div>
       <div class="corporate-trip">
         <header class="corporate-trip__header">Корпоративные путешествия</header>

@@ -1,13 +1,8 @@
 .card {
   position: relative;
-  width: 288px;
-
-  @media (min-width: @desktop-width) {
-    width: 350px;
-  }
 }
 
-.card__name{
+.card__name {
   position: absolute;
   z-index: 1;
   display: flex;
@@ -23,6 +18,12 @@
   font-weight: 500;
   color: @dark-color;
   background-color: @white;
+}
+
+.card__img {
+  @media (min-width: @desktop-width) {
+    width: 350px;
+  }
 }
 
 .card__link {
@@ -45,6 +46,7 @@
       opacity: 0.6;
       cursor: pointer;
     }
+
     &:hover::after {
       position: absolute;
       z-index: 3;
@@ -67,28 +69,3 @@
     }
   }
 }
-
-/* .image__over:hover::before,
-.image__over:focus::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(48, 53, 71, .4);
-  cursor: pointer;
-}
- */
-
-/* .card__country {
-  position: absolute;
-  display: block;
-  width: 215px;
-  height: 61px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  background-color: @white;
-} */
