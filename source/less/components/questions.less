@@ -1,0 +1,136 @@
+.questions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: @light;
+  margin-bottom: 60px;
+
+  @media (min-width: @tablet-width) {
+    height: 455px;
+    background-image: url("../img/questions-bg-tablet.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/questions-bg-tablet@2x.jpg");
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    justify-content: flex-end;
+    margin-left: 375px;
+    margin-right: 375px;
+    background-image: url("../img/questions-bg-desktop.jpg");
+    background-size: 844px auto;
+    background-color: @white;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/questions-bg-desktop@2x.jpg");
+    }
+  }
+}
+
+.questions__wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  align-items: center;
+  text-align: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  background-color: transparent;
+
+  @media (min-width: @tablet-width) {
+    width: 658px;
+    height: 311px;
+    box-sizing: border-box;
+    row-gap: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: @white;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 656px;
+    height: 315px;
+    padding-left: 49px;
+    padding-right: 49px;
+    box-shadow: 0 4px 30px @dark-blue;
+  }
+}
+
+.questions__header {
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.questions__subtitle {
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 9px;
+  }
+}
+
+.questions__form {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    justify-content: center;
+  }
+}
+
+.questions__form input { // иначе в Placeholder у input-ов свой шрифт
+  .set-font();
+}
+
+.questions__form-field {
+  width: 288px;
+  min-height: 50px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  text-align: left;
+  box-sizing: border-box;
+  color: @most-dark-color;
+
+  &::placeholder {
+    padding-left: 15px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    text-align: left;
+    color: @most-dark-color;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 269px;
+  }
+}
+
+.questions__phone::placeholder {
+  padding-left: -20px;
+}
+
+.questions__button {
+  width: 288px;
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: @tablet-width) {
+    width: 269px;
+  }
+}

@@ -1,0 +1,42 @@
+.corporate-trip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 26px;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  @media (min-width: @tablet-width) {
+    border-top: 1px solid @grey-light;
+    margin-right: 16px;
+    margin-left: 16px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 375px;
+    margin: 0;
+    border: none;
+    box-sizing: border-box;
+    text-align: left;
+  }
+}
+
+.corporate-trip__header {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 32px;
+  text-align: center;
+  color: @most-dark-color;
+}
+
+.corporate-trip__description {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  color: @dark-color-transparent;
+}
+
