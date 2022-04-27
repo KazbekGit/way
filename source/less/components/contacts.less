@@ -1,5 +1,7 @@
 .contacts {
-  margin-left: 50px;
+  @media (min-width: @desktop-width) {
+    margin-left: 50px;
+  }
 }
 
 .contacts__title {
@@ -13,15 +15,21 @@
 }
 
 .contacts__tel-block {
-  margin-left: -40px;
 
   @media (min-width: @desktop-width) {
     display: flex;
     justify-content: flex-start;
+    margin-left: -40px;
+
   }
 }
 
 .contacts__telephone {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: center;
+
   color: @primary-orange;
   margin-left: 10px;
 
@@ -32,6 +40,7 @@
 }
 
 .contacts__telephone-icon {
+  color: @primary-orange;
   display: none;
 
   @media (min-width: @desktop-width) {

@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 22px;
   margin-left: 16px;
   margin-right: 16px;
   border-top: 1px solid @grey-light;
@@ -27,8 +27,8 @@
     border-right: 1px solid @grey-light;
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
     padding-left: 50px;
+    box-sizing: border-box;
   }
 }
 
@@ -43,24 +43,37 @@
   display: flex;
   column-gap: 16px;
   margin-top: 25px;
-  margin-bottom: 23px;
+  margin-bottom: 15px;
 }
 
 .contact-us__phone-block {
   display: flex;
   align-items: center;
+  column-gap: 6px;
 }
 
 .contact-us__email {
   text-decoration: none;
   color: @primary-orange;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  text-align: left;
 }
 
 .contact-us__telephone {
   text-decoration: none;
   color: @primary-orange;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: left;
 
   @media (min-width: @tablet-width) {
     margin-left: 17px;
   }
+}
+
+.contact-us__icon {
+  color: @grey;
 }

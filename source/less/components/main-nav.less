@@ -21,6 +21,16 @@
     padding-bottom: 15px;
     box-sizing: border-box;
     background-color: @light;
+
+    &:hover {
+      .main-nav__icon-phone {
+        color: @primary-orange;
+      }
+
+      .main-nav__link {
+        color: @primary-orange;
+      }
+    }
   }
 
   .main-nav__link::after {
@@ -47,6 +57,10 @@
     position: absolute;
     right: 0;
     background-color: transparent;
+
+    @media (min-width: @tablet-width) {
+      width: 75px;
+    }
   }
 
   .main-nav__toggle::after,
@@ -185,4 +199,8 @@
   margin: 0;
   padding: 0;
   text-decoration: underline;
+}
+
+.main-nav__icon-phone {
+  color: @dark-grey;
 }

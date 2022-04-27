@@ -32,7 +32,7 @@
           <a class="main-nav__link" href="#tour-prices" aria-label="перейти к разделу о ценах">Цены</a>
         </li>
         <li class="main-nav__item">
-          <svg class="main-nav__icon" viewBox="0 0 30 30" width="30" height="30" >
+          <svg class="main-nav__icon main-nav__icon-phone" viewBox="0 0 30 30" width="30" height="30" >
             <use xlink:href="img/sprite.svg#phone">
           </svg>
           <a class="main-nav__link main-nav__phone" href="tel:+749978468446">+7(499)-784-684-46</a>
@@ -154,9 +154,9 @@
             <p class="contacts__title">Свяжитесь с нами</p>
             <div class="contacts__tel-block">
               <svg class="contacts__telephone-icon" viewBox="0 0 30 30" width="30" height="30">
-                <use xlink:href="img/sprite.svg#phone-orange">
+                <use xlink:href="img/sprite.svg#phone">
               </svg>
-              <a class="contacts__telephone" href="tel:+749978468446">+7(499)-784-684-46</a>
+              <a class="contacts__telephone" href="tel:+749978468446">+7 (499)-784-684-46</a>
             </div>
           </div>
         </div>
@@ -189,10 +189,10 @@
       <div class="questions__wrapper">
         <header class="questions__header">У Вас остались вопросы?</header>
         <p class="questions__subtitle">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
-        <form class="questions__form" action="#" method="post">
-          <input class="questions__form-field questions__phone" id="question-tel" type="tel" name="user-phone" id="phone" pattern="\+7\s?[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2}" placeholder="*  +7 Введите 10 цифр номера" aria-label="введите номер телефона +7 и следом 10 цифр номера" required>
-          <input class="questions__form-field questions__e-mail" type="email" name="user-e-mail" id="e-mail" placeholder="E-mail"  aria-label="Введите e-mail">
-          <button class="button questions__button" type="submit" aria-label="отправить данные">Отправить</button>
+        <form class="form " action="#" method="post">
+          <input class="form__phone-field form__form-field form__phone" id="question-tel" type="tel" name="question-user-phone" pattern="\+7\s?[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2}" placeholder="*  +7 Введите 10 цифр номера" aria-label="введите номер телефона +7 и следом 10 цифр номера" required>
+          <input class="form__e-mail-field form__form-field form__e-mail" type="email" name="question-user-e-mail" id="question-e-mail" placeholder="E-mail"  aria-label="Введите e-mail">
+          <button class="button form__button" type="submit" aria-label="отправить данные">Отправить</button>
         </form>
       </div>
     </section>
@@ -235,7 +235,7 @@
         </div>
         <div class="contact-us__phone-block">
           <svg class="contact-us__icon" viewBox="0 0 26 26" width="26" height="26" >
-            <use xlink:href="img/sprite.svg#phone-grey">
+            <use xlink:href="img/sprite.svg#phone">
           </svg>
           <a class="contact-us__telephone" href="tel:+749978468446">+7(499)-784-684-46</a>
         </div>
@@ -245,8 +245,19 @@
         <p class="corporate-trip__description">Также вы можете заказать индивидуальное путешествие под вашу компанию. Подобные туры очень сближают компанию, помогают поддерживать корпоративный дух, а также являются отличным времяпрепровождением</p>
       </div>
   </footer>
-
-
+  <div class="modal hide-block">
+    <div class="modal__wrapper">
+      <header class="modal__header">Купить тур</header>
+      <form class="form modal__form" action="#" method="post">
+        <input class="form__form-field form__phone-field" id="modal-tel" type="tel" name="modal-phone" pattern="\+7\s?[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2}" placeholder="*  +7 Введите 10 цифр номера" aria-label="введите номер телефона +7 и следом 10 цифр номера" required>
+        <input class="form__form-field form__e-mail-field" type="email" name="modal-e-mail" id="modal-e-mail" placeholder="E-mail"  aria-label="Введите e-mail">
+        <button class="button form__button" type="submit" aria-label="отправить данные">Отправить</button>
+      </form>
+    </div>
+  </div>
+  <div class="success-modal hide-block">
+    <header class="success-modal__header">Форма успешно отправлена, спасибо! :)</header>
+  </div>
   <script src="js/main.min.js" type="module"></script>
 </body>
 </html>
