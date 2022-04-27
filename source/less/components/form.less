@@ -30,7 +30,7 @@
   color: @most-dark-color;
   border: 1px solid @dark-color-transparent-30;
   outline: none;
-  
+
   &::placeholder {
     padding-left: 15px;
     font-size: 14px;
@@ -47,7 +47,6 @@
   &:invalid {
     border: 1px solid @primary-orange;
   }
-
 }
 
 .form__phone::placeholder {
@@ -61,5 +60,9 @@
 
   @media (min-width: @tablet-width) {
     width: 269px;
+
+    &--small {
+      width: 250px;
+    }
   }
 }
