@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="page" lang="en">
+<html class="page" lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,7 +19,7 @@
   <header class="page-header">
     <a class="logo" href="index.html">
       <svg class="logo__icon" viewBox="0 0 58 22" width="44" height="17" >
-        <use xlink:href="img/sprite.svg#logo">
+        <use xlink:href="img/sprite.svg#logo"/>
       </svg>
     </a>
     <nav class="main-nav main-nav--closed">
@@ -33,7 +33,7 @@
         </li>
         <li class="main-nav__item">
           <svg class="main-nav__icon main-nav__icon-phone" viewBox="0 0 30 30" width="30" height="30" >
-            <use xlink:href="img/sprite.svg#phone">
+            <use xlink:href="img/sprite.svg#phone"/>
           </svg>
           <a class="main-nav__link main-nav__phone" href="tel:+749978468446">+7(499)-784-684-46</a>
         </li>
@@ -42,16 +42,17 @@
   </header>
   <main class="page-main">
     <section class="promo">
-      <header class="promo__header">Путешествие по <br class="mobile-br">&nbsp;Европе</header>
+      <h3 class="promo__header">Путешествие по <br class="mobile-br">&nbsp;Европе</h3>
       <p class="promo__description">В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а также потрясающая красота природы.</p>
       <a class="button promo__button promo__header-button" href="#tour-details" aria-label="подробности о туре">
         <span>смотреть тур</span>
         <svg width="16" height="16" viewBox="0 0 16 16">
-          <use xlink:href="img/sprite.svg#arrow-bottom">
+          <use xlink:href="img/sprite.svg#arrow-bottom"/>
         </svg>
       </a>
     </section>
     <section class="catalog">
+      <h3 class="visually-hidden">Места посещения</h3>
       <div class="catalog__wrapper">
         <div class="catalog__header-block">
           <header class="catalog__header" id="tour-about">Места посещения</header>
@@ -117,6 +118,7 @@
       </div>
     </section>
     <section class="tabs" id="tour-details">
+      <h3 class="visually-hidden">Детали тура</h3>
       <ul class="tabs__list">
         <li class="tabs__item tabs__item--active">Греция</li>
         <li class="tabs__item">Албания</li>
@@ -146,6 +148,7 @@
       </div>
     </section>
     <section class="prices">
+      <h3 class="visually-hidden">Цены</h3>
       <div class="prices__wrapper">
         <div class="prices__description">
           <header class="prices__description-header" id="tour-prices">Цены</header>
@@ -154,7 +157,7 @@
             <p class="contacts__title">Свяжитесь с нами</p>
             <div class="contacts__tel-block">
               <svg class="contacts__telephone-icon" viewBox="0 0 30 30" width="30" height="30">
-                <use xlink:href="img/sprite.svg#phone">
+                <use xlink:href="img/sprite.svg#phone"/>
               </svg>
               <a class="contacts__telephone" href="tel:+749978468446">+7 (499)-784-684-46</a>
             </div>
@@ -186,6 +189,7 @@
       </div>
     </section>
     <section class="questions">
+      <h3 class="visually-hidden">Вопросы</h3>
       <div class="questions__wrapper">
         <header class="questions__header">У Вас остались вопросы?</header>
         <p class="questions__subtitle">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
@@ -200,7 +204,7 @@
   <footer class="page-footer">
     <div class="wrapper footer__wrapper">
       <div class="next-trip">
-        <header class="next-trip__header page-footer__header">Следующие путешествия</header>
+        <p class="next-trip__header page-footer__header">Следующие путешествия</p>
         <div class="next-trip__list">
           <ul>
             <li class="next-trip__item"><a href="#">Марсель</a></li>
@@ -226,24 +230,25 @@
         </div>
       </div>
       <div class="contact-us">
-        <header class="contact-us__header">Наши контакты</header>
+        <p class="contact-us__header">Наши контакты</p>
         <div class="contact-us__email-block">
           <svg class="contact-us__icon" viewBox="0 0 30 30" width="30" height="30" >
-            <use xlink:href="img/sprite.svg#mail-icon">
+            <use xlink:href="img/sprite.svg#mail-icon"/>
           </svg>
           <a class="contact-us__email" href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
         </div>
         <div class="contact-us__phone-block">
           <svg class="contact-us__icon" viewBox="0 0 26 26" width="26" height="26" >
-            <use xlink:href="img/sprite.svg#phone">
+            <use xlink:href="img/sprite.svg#phone"/>
           </svg>
           <a class="contact-us__telephone" href="tel:+749978468446">+7(499)-784-684-46</a>
         </div>
       </div>
       <div class="corporate-trip">
-        <header class="corporate-trip__header">Корпоративные путешествия</header>
+        <p class="corporate-trip__header">Корпоративные путешествия</p>
         <p class="corporate-trip__description">Также вы можете заказать индивидуальное путешествие под вашу компанию. Подобные туры очень сближают компанию, помогают поддерживать корпоративный дух, а также являются отличным времяпрепровождением</p>
       </div>
+    </div>
   </footer>
   <div class="modal hide-block">
     <div class="modal__wrapper">
