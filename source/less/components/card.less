@@ -1,5 +1,12 @@
 .card {
   position: relative;
+
+  @media (min-width: @desktop-width) {
+    &:nth-child(4) {
+      margin-left: 190px;
+      margin-right: 50px;
+    }
+  }
 }
 
 .card__name {

@@ -25,8 +25,11 @@
   }
 
   @media (min-width: @desktop-width) {
+    width: 430px;
     height: 597px;
+    box-sizing: border-box;
     background-image: url("../img/greece-tabs-desktop.jpg");
+    background-position: 0 0;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/greece-tabs-desktop@2x.jpg");
@@ -60,8 +63,8 @@
 
   @media (min-width: @desktop-width) {
     min-width: 382px;
-    top: 114px;
-    left: 318px;
+    top: 110px;
+    left: 290px;
   }
 }
 
@@ -91,6 +94,10 @@
       left: 0;
       background-color: @primary-orange;
     }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: -7px;
   }
 }
 
