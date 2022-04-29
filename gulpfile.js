@@ -35,7 +35,7 @@ const html = () => {
 }
 
 const scripts = () => {
-  return gulp.src('source/js/main.js')
+  return gulp.src('source/js/*.js')
   .pipe(terser())
   .pipe(rename('main.min.js'))
   .pipe(gulp.dest('build/js'))
@@ -73,7 +73,6 @@ const copyImages = () => {
 const fav = () =>
   gulp.src(['./manifest.webmanifest','source/img/favicons/favicon.ico'])
     .pipe(gulp.dest('build/'));
-
 } */
 
 const svg = () =>
