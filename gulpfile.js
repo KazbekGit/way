@@ -69,12 +69,6 @@ const copyImages = () => {
     .pipe(gulp.dest('build/img'))
 }
 
-/*
-const fav = () =>
-  gulp.src(['./manifest.webmanifest','source/img/favicons/favicon.ico'])
-    .pipe(gulp.dest('build/'));
-} */
-
 const svg = () =>
   gulp.src(['source/img/*.svg', '!source/img/sprites/*.svg', '!source/img/sprites.svg'])
     .pipe(svgo())
@@ -126,11 +120,10 @@ export const watcher = () => {
 
 // Build
 
-/* export const build = gulp.series(
+ export const build = gulp.series(
   clean,
   copyFonts,
   optimizeImages,
-  fav,
   gulp.parallel(
     styles,
     html,
@@ -139,7 +132,7 @@ export const watcher = () => {
     sprites,
     createWebp
   ),
-); */
+);
 
 // Default
 
@@ -147,7 +140,6 @@ export default gulp.series(
   clean,
   copyFonst,
   copyImages,
-/*   fav, */
   gulp.parallel(
     styles,
     html,
