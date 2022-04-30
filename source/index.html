@@ -16,7 +16,7 @@
     <link rel="preload" href="fonts/montserrat-v23-latin_cyrillic-700.woff" as="font" type="font/woff" crossorigin>
 </head>
 <body class="page-body">
-  <header class="page-header">
+  <header class="page-header page-header--noJS">
     <a class="logo" href="index.html">
       <svg class="logo__icon" viewBox="0 0 58 22" width="44" height="17" >
         <use xlink:href="img/sprite.svg#logo"/>
@@ -263,7 +263,12 @@
     </div>
   </div>
   <div class="success-modal hide-block">
+    <button class="success-modal__close-button" aria-label="Закрыть окно"></button>
     <header class="success-modal__header">Форма успешно отправлена, спасибо! :)</header>
+  </div>
+  <div class="error-modal hide-block">
+    <button class="error-modal__close-button" aria-label="Закрыть окно"></button>
+    <header class="error-modal__header">Произошла досадная ошибка :(</header>
   </div>
   <script src="js/main.min.js" type="module"></script>
 </body>

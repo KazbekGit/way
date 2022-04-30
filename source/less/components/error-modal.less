@@ -1,10 +1,13 @@
-.success-modal {
+.error-modal {
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 320px;
   height: 444px;
   background-color: @light;
@@ -12,7 +15,6 @@
   font-weight: 500;
   line-height: 43px;
   z-index: 10;
-  padding-top: 170px;
   box-sizing: border-box;
   text-align: center;
   color: @dark-grey;
@@ -25,7 +27,7 @@
   }
 }
 
-.success-modal__close-button {
+.error-modal__close-button {
   position: absolute;
   align-self: flex-end;
   right: 20px;

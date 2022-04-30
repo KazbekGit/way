@@ -4,7 +4,7 @@
   top: 0;
   left: 0;
   background-color: @white;
-  z-index: 5;
+  z-index: 10;
 
   .main-nav__list {
     display: flex;
@@ -155,9 +155,13 @@
   }
 
   &--noJS {
-    position: absolute;
-    height: 528px;
+    position: static;
+    height: 500px;
     top: 50px;
+
+    @media (min-width: @tablet-width) {
+      height: 450px;
+    }
 
     .main-nav__list {
       display: flex;

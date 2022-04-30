@@ -48,7 +48,7 @@ const optimizeImages = () => {
     .pipe(gulp.dest('build/img'))
 }
 
-const copyFonst = (done) => {
+const copyFonts = (done) => {
   gulp.src('source/fonts/*.{woff2,woff}', {
     base: 'source'
   })
@@ -138,7 +138,7 @@ export const watcher = () => {
 
 export default gulp.series(
   clean,
-  copyFonst,
+  copyFonts,
   copyImages,
   gulp.parallel(
     styles,
