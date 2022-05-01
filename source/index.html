@@ -59,7 +59,7 @@
           <p class="catalog__description">Вы можете выбрать полный тур или частичный, с посещением первых 3 мест</p>
         </div>
         <div class="catalog__cards">
-          <div class="card">
+          <div class="card" data-country-name="Греция" data-country-id="1">
             <a class="card__link" href="#tour-details">
               <span class="card__name">Греция</span>
               <picture>
@@ -70,7 +70,7 @@
               </picture>
             </a>
           </div>
-          <div class="card">
+          <div class="card" data-country-name="Албания" data-country-id="2">
             <a class="card__link" href="#tour-details">
               <span class="card__name">Албания</span>
               <picture>
@@ -81,7 +81,7 @@
               </picture>
             </a>
           </div>
-          <div class="card">
+          <div class="card" data-country-name="Македония" data-country-id="3">
             <a class="card__link" href="#tour-details">
               <span class="card__name">Македония</span>
               <picture>
@@ -92,7 +92,7 @@
               </picture>
             </a>
           </div>
-          <div class="card">
+          <div class="card" data-country-name="Черногория" data-country-id="4">
             <a class="card__link" href="#tour-details">
               <span class="card__name">Черногория</span>
               <picture>
@@ -103,7 +103,7 @@
               </picture>
             </a>
           </div>
-          <div class="card">
+          <div class="card" data-country-name="Хорватия" data-country-id="5">
             <a class="card__link" href="#tour-details">
               <span class="card__name">Хорватия</span>
               <picture>
@@ -120,11 +120,11 @@
     <section class="tabs" id="tour-details">
       <h3 class="visually-hidden">Детали тура</h3>
       <ul class="tabs__list">
-        <li class="tabs__item tabs__item--active">Греция</li>
-        <li class="tabs__item">Албания</li>
-        <li class="tabs__item">Македония</li>
-        <li class="tabs__item">Черногория</li>
-        <li class="tabs__item">Ховатия</li>
+        <li class="tabs__item tabs__item--active" data-country-id-item="1">Греция</li>
+        <li class="tabs__item" data-country-id-item="2">Албания</li>
+        <li class="tabs__item" data-country-id-item="3">Македония</li>
+        <li class="tabs__item" data-country-id-item="4">Черногория</li>
+        <li class="tabs__item" data-country-id-item="5">Хорватия</li>
       </ul>
       <div class="tabs__wrapper">
         <div class="tabs__description">
@@ -138,8 +138,7 @@
             <p class="reviews__description">Метеоры в Греции можно <br class="mobile-br">&nbsp;сравнить разве что с<br class="mobile-br">&nbsp;Монсерратт в Испании. Такие же высоченные скалы. Но здесь потрясает масштаб. Огромная территория, высоко в горах. Ощущение такое, как будто стоишь на краю света! </p>
             <div class="reviews__author">
               <picture>
-                <source type="image/webp" media="(min-width: 320px)" srcset="img/author-avatar.webp, img/author-avatar@2x.webp 2x">
-                <img class="reviews__author-avatar" src="img/author-avatar.png" srcset="img/author-avatar@2x.png 2x" alt="Фото автора" width="38" height="38">
+                <img class="reviews__author-avatar" src="img/author-avatar-1.png" srcset="img/author-avatar-1@2x.png 2x" alt="Фото автора" width="38" height="38">
               </picture>
               <p class="reviews__author-name">Влада Голицина</p>
             </div>

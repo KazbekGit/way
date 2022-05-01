@@ -91,6 +91,134 @@ buyTourButtons.forEach((elem) => {
 
 // переключение табов
 
+const countriesNames = ['Греция', 'Албания', 'Македония', 'Черногория', 'Хорватия'];
+
+const descriptions = ['На севере Греции находится один из крупнейших комплексов монастырей, расположенных на вершинах скал. Название его «Метеора» буквально переводится как «висящие в воздухе». Этот монастырь основная цель нашего путешествия в Греции. После покарения скал из песчанника и обломочной горной породы, достигающих в высоту 600 метров, наградой будет неописуемая красота природы и атмосфера, царящая в монастырях Метеоры.',
+  'В Албании мы посетим Курорт Ксамиль. Этот курорт поразит вас чистейшей водой и удивительным пляжем. Вначале кажется, что на пляже вас встречает обычный, правда невероятно белоснежный и слишком крупный песок. Однако, присмотревшись, можно понять, что это не песок, а камни, перетёртые до такого мелкого состояния.',
+  'В Македонии нашей целью будет посетить Палаошник, который расположился в удивительно красивой лесистой местности возле Охридского озера и Самуиловой твердыни. А также мы заберемся на вершину горы Татичев Камен где находится  археологический памятник Кокино в длину около 100 метров.',
+  'Черногория удивит нас самым большим в Европе каньоном реки Тара, который в некоторых местах высотой берегов доходит до 1300 метров, а шириной не превышает трех. При этом длина каньона составляет 80 км. ',
+  'В Хорватии мы посетим необычайную пещеру названную Бередине. Ее подземный мир увлечет вас на 80-ти метровую глубину через 5 освещенных залов, украшенных удивительными нерукотворными скульптурами —  сталактитами и сталагмитами —  формировавшимися тысячи и тысячи лет.'
+];
+
+const reviews = ['Метеоры в Греции можно сравнить разве что с Монсерратт в Испании. Такие же высоченные скалы. Но здесь потрясает масштаб. Огромная территория, высоко в горах. Ощущение такое, как будто стоишь на краю света!',
+  'Замечательный курорт, обязательно стоит посетить. В следующий раз возьму с собой сестру, чтобы тоже смогла вкусить все красоты природы :)',
+  'Я бы сказал необычное старое здание. В архитектуре я не разбираюсь, но подъем в гору был очень веселым так как люди оказались легкими и заводными. Красота природы впечатлила, особенно после долгого пути в гору.',
+  'Неописуемой красоты каньон! Ничего прекраснее в жизни не видела, разве что в фильмах :) Всем советую',
+  'Мы поехали всей семьей, я, моя жена и родители. Пещера просто незабываема! А то, что все это формировалось тысячелетиями, мега необычно. Первоначально даже не верилось, но натур ни с чем не спутать по итогу :)'
+];
+
+const authorNames = ['Влада Голицина', 'Маришка', 'Михаил Кузьмин', 'Анастасия Мей', 'Владимир Мулицин'];
+
+
+const tabsHeader = document.querySelector('.tabs__description-header');
+const tabsDescription = document.querySelector('.tabs__description-text');
+
+const reviewsBlock = document.querySelector('.reviews');
+const review = document.querySelector('.reviews__description');
+const authorName = document.querySelector('.reviews__author-name');
+const authorAvatar = document.querySelector('.reviews__author-avatar');
+
+const tabsList = document.querySelector('.tabs__list');
+const tabsItems = document.querySelectorAll('.tabs__item');
+
+const clearClass = (elemList, classToRemove) => {
+  elemList.forEach((elem) => {
+    elem.classList.remove(classToRemove);
+  })
+}
+
+const changeCard = (currentItemID) => {
+  tabsHeader.textContent = countriesNames[currentItemID - 1 ];
+  tabsDescription.textContent = descriptions[currentItemID - 1];
+  review.textContent = reviews[currentItemID - 1];
+  let url = '../img/tabs-desktop-' + currentItemID + '.webp';
+
+
+  if(window.innerWidth === 1920) {
+    reviewsBlock.style.backgroundImage = "url(" + url + ")";
+  }
+
+  authorName.textContent = authorNames[currentItemID - 1];
+  authorAvatar.src = '../img/author-avatar-' + currentItemID + '.png';
+  authorAvatar.srcset = '../img/author-avatar-' + currentItemID + '@2x.png';
+
+  clearClass(tabsItems, 'tabs__item--active');
+  tabsItems[currentItemID - 1].classList.add('tabs__item--active')
+}
+
+const catalogList = document.querySelector('.catalog__cards');
+let currentListItemID = parseInt(document.querySelector('.tabs__item--active').getAttribute('data-country-id-item'), 10);
+
+const setTabsListShift = () => {
+
+   if(window.innerWidth < tabsList.clientWidth + 25) {
+    tabsList.style.left = -1 * (currentListItemID - 1 ) * (tabsList.clientWidth / tabsItems.length) + 'px';
+  }
+
+}
+
+catalogList.addEventListener('click', (evt) => {
+  if(evt.target.closest('.card')) {
+    let currentCountry = evt.target.closest('.card');
+    currentListItemID = currentCountry.getAttribute('data-country-id');
+    changeCard(currentListItemID);
+  }
+  setTabsListShift();
+})
+
+tabsList.addEventListener('click', (evt) => {
+  if(evt.target.closest('.tabs__item')) {
+    let currentItem = evt.target.closest('.tabs__item');
+    currentListItemID = currentItem.getAttribute('data-country-id-item');
+    changeCard(currentListItemID);
+  }
+  setTabsListShift();
+})
+
+// Swipe
+
+const tabsWrapper = document.querySelector('.tabs__wrapper');
+
+let x1 = null;
+let x2 = null;
+
+tabsWrapper.addEventListener('touchstart', (evt) => {
+  x1 = evt.touches[0].clientX;
+});
+
+tabsWrapper.addEventListener('touchmove', (evt) => {
+  x2 = evt.touches[0].clientX;
+});
+
+function swipeTabs() {
+  if(!x1 || !x2) {
+    return false;
+  }
+
+  if(x1 - x2 > 0) {
+    currentListItemID = parseInt(currentListItemID, 10) + 1;
+    if(currentListItemID > tabsItems.length) {
+      currentListItemID = tabsItems.length
+    }
+    changeCard(currentListItemID);
+    setTabsListShift();
+
+  }
+
+  if(x1 - x2 < 0) {
+    currentListItemID = currentListItemID - 1;
+    if(currentListItemID < 1) {
+      currentListItemID = 1
+    }
+    changeCard(currentListItemID);
+    setTabsListShift();
+
+  }
+}
+
+tabsWrapper.addEventListener('touchend', swipeTabs)
+
+
 
 
 
