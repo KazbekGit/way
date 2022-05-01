@@ -1,4 +1,3 @@
-
 const overlay = document.querySelector('.overlay');
 
 const openOverlay = () => {
@@ -177,16 +176,14 @@ tabsList.addEventListener('click', (evt) => {
 
 // Swipe
 
-const tabsWrapper = document.querySelector('.tabs__wrapper');
-
 let x1 = null;
 let x2 = null;
 
-tabsWrapper.addEventListener('touchstart', (evt) => {
+tabsList.addEventListener('touchstart', (evt) => {
   x1 = evt.touches[0].clientX;
 });
 
-tabsWrapper.addEventListener('touchmove', (evt) => {
+tabsList.addEventListener('touchmove', (evt) => {
   x2 = evt.touches[0].clientX;
 });
 
@@ -216,11 +213,7 @@ function swipeTabs() {
   }
 }
 
-tabsWrapper.addEventListener('touchend', swipeTabs)
-
-
-
-
+tabsList.addEventListener('touchend', swipeTabs)
 
 // отправка формы
 
@@ -296,6 +289,7 @@ form.forEach((elem) => {
     evt.preventDefault();
     openOverlay();
     const formData = new FormData(evt.target);
+
     const src = 'https://webhook.site/fee3bf41-1370-48c3-818b-7bdfd12d7c5d'; // Тестовый сервер для отправки на него запросов
     fetch(
       src,
