@@ -126,20 +126,24 @@ const clearClass = (elemList, classToRemove) => {
   })
 }
 
+
 const changeCard = (currentItemID) => {
   tabsHeader.textContent = countriesNames[currentItemID - 1 ];
   tabsDescription.textContent = descriptions[currentItemID - 1];
   review.textContent = reviews[currentItemID - 1];
-  let url = '../img/tabs-desktop-' + currentItemID + '.webp';
-
+  let url = 'img/tabs-desktop-' + currentItemID + '.webp';
+  let url2 = 'img/tabs-desktop-' + currentItemID + '@2x.webp';
 
   if(window.innerWidth === 1920) {
     reviewsBlock.style.backgroundImage = "url(" + url + ")";
+    if (window.devicePixelRatio === 2) {
+      reviewsBlock.style.backgroundImage = "url(" + url2 + ")";
+    }
   }
 
   authorName.textContent = authorNames[currentItemID - 1];
-  authorAvatar.src = '../img/author-avatar-' + currentItemID + '.png';
-  authorAvatar.srcset = '../img/author-avatar-' + currentItemID + '@2x.png';
+  authorAvatar.src = 'img/author-avatar-' + currentItemID + '.png';
+  authorAvatar.srcset = 'img/author-avatar-' + currentItemID + '@2x.png';
 
   clearClass(tabsItems, 'tabs__item--active');
   tabsItems[currentItemID - 1].classList.add('tabs__item--active')
