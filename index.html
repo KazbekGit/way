@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Змейка</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <h1>Змейка</h1>
+        <div class="stats">
+          <div>Очки: <span id="score">0</span></div>
+          <div>Рекорд: <span id="highScore">0</span></div>
+          <div>Скорость: <span id="speed">1x</span></div>
+        </div>
+      </header>
+
+      <main class="main">
+        <canvas id="game" width="576" height="480" aria-label="Игровое поле"></canvas>
+        <div id="overlay" class="overlay">
+          <div class="card">
+            <h2>Как играть</h2>
+            <ul>
+              <li>Запустите игру кнопкой «Старт», клавишей Enter или пробелом</li>
+              <li>Управление: стрелки или WASD</li>
+              <li>Пауза: P или пробел</li>
+              <li>Ешьте яблоки, избегайте стен и своего хвоста</li>
+            </ul>
+            <div class="actions">
+              <button id="startBtn" class="btn primary">Старт</button>
+              <button id="pauseBtn" class="btn">Пауза</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="touch-controls" aria-hidden="true">
+          <div class="row">
+            <button class="btn soft" data-dir="up">▲</button>
+          </div>
+          <div class="row">
+            <button class="btn soft" data-dir="left">◀</button>
+            <button class="btn soft" data-dir="down">▼</button>
+            <button class="btn soft" data-dir="right">▶</button>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <button id="restartBtn" class="btn">Рестарт</button>
+        <a class="muted" href="https://ru.wikipedia.org/wiki/Snake" target="_blank" rel="noreferrer noopener">Что такое «Змейка»?</a>
+      </footer>
+    </div>
+
+    <script defer src="/script.js"></script>
+  </body>
+</html>
